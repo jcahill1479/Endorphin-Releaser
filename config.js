@@ -8,11 +8,15 @@ var GAME = {
 
 var SHAPE = {
   initialized : false,
-    x : 0,
-    y : 0
+    Xcenter : 0,
+    Ycenter : 0,
+    sides : 0,
+    size : 0
 };
 
 var NEW_OBJECT = {
   x : 0,
-  y : 0
+  y : 0,
+  sides : 0,
+  size : 0
 };

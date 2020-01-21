@@ -1,3 +1,8 @@
+
+
 document.addEventListener('click', function(event) {
-  switch ()
+  switch (event.key){
+    case "click":
+
+  }
 }
