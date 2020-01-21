@@ -1,22 +1,13 @@
 var GAME = {
   canvas : {
-    width : 600,
-    height : 300
+    width : 500,
+    height : 500
   },
   started : true
 };
 
 var SHAPE = {
   initialized : false,
-    Xcenter : 0,
-    Ycenter : 0,
-    sides : 0,
-    size : 0
-};
-
-var NEW_OBJECT = {
-  x : 0,
-  y : 0,
-  sides : 0,
-  size : 0
+    Xc : 0,
+    Yc : 0
 };

@@ -1,3 +1,4 @@
 function Start(){
-  runGame();
+  //runGame();
+
 }
