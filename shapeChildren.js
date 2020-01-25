@@ -44,12 +44,13 @@ function GetNewChildDirection() {
 
 function drawShapeChild(child, sides, context) {
   var sides = sideNum;
-  var size = 20;
+  var size = child.size;
   var xcenter = child.x;
   var ycenter = child.y;
 
   context.beginPath();
   context.moveTo(xcenter + size * Math.cos(0), ycenter + size * Math.sin(0));
+  //context.fillStyle = RandomRGBColor();  Disco Mode!!!!
 
   for (var i = 1; i <= sides; i += 1) {
     context.lineTo (xcenter + size * Math.cos(i * 2 * Math.PI / sides), ycenter + size * Math.sin(i * 2 * Math.PI / sides));
@@ -62,9 +63,17 @@ function RenderChildren(context) {
   // This function is run for each asteroid
   SHAPECHILDREN.children.forEach(
     function(child, index, object) {
+        //context.style.color = RandomRGBColor();
         context.moveTo(child.x, child.y);
         context.strokeStyle = 'black';
         context.lineWidth = 2;
         drawShapeChild(child, sideNum, context);
   });
+}
+
+function generateShapeChildren() {
+  var number = (Math.floor(Math.random() * 11) + 10);
+  for (var c = 0; c < number; c++) {
+    AddChild(20);
+  }
 }
