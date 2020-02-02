@@ -14,14 +14,15 @@ var SHAPECHILDREN = {
     yMin : 50,
     yMax : 100
   },
-  baseSpeed : 5
+  baseSpeed : 5,
+  gravity : 0.05
 }
 
 function AddChild(size) {
   // Generate asteroid location
   var locationXY = GetNewChildLocation();
   var direction = GetNewChildDirection();
-
+  var gravity;
   // Add asteroid
   SHAPECHILDREN.children.push(
     {
@@ -29,7 +30,8 @@ function AddChild(size) {
       y : locationXY[1],
       angle : direction,
       size : size,
-      snap : false
+      snap : false,
+      gravitySpeed : 0
     }
   );
 }

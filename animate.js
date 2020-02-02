@@ -6,19 +6,25 @@ function handleChildAnimation() {
     var radians = (Math.PI / 180) * child.angle,
       cos = Math.cos(radians),
       sin = Math.sin(radians);
+    child.gravitySpeed += SHAPECHILDREN.gravity;
     child.x += SHAPECHILDREN.baseSpeed * sin;
-    child.y += SHAPECHILDREN.baseSpeed * cos;
-    /*
-              if (CHILD.x > GAME.canvas.width) {
-                SHAPECHILDREN.snap = true;
-              } else if (CHILD.x < 0) {
-                SHAPECHILDREN.snap = true;
-              } else if (CHILD.y > GAME.canvas.height) {
-                SHAPECHILDREN.snap = true;
-              } else if (CHILD.y < 0) {
-                SHAPECHILDREN.snap = true;
-              }
-*/
+    child.y += SHAPECHILDREN.baseSpeed * cos + child.gravitySpeed;
+    if (child.x>GAME.canvas.width)
+    {
+        delete child.x;
+    }
+    else if (child.x<0)
+    {
+        delete child.x;
+    }
+    else if (child.y>GAME.canvas.height)
+    {
+        delete child.y;
+    }
+    else if (child.y<0)
+    {
+        delete child.y;
+    }
   });
 };
 var score = 0;

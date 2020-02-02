@@ -8,12 +8,12 @@ canvas.addEventListener('click', function(event) {
   var xVal = event.pageX,
     yVal = event.pageY;
   console.log(xVal, yVal);
-  //var color = RandomRGBColor();
+  var color = RandomRGBColor();
 
   if (yVal > 200 && yVal < 300 && xVal > 200 && xVal < 300) {
     score += scorePlus*multiplier;
     generateShapeChildren();
-    //context.fillStyle = RandomRGBColor();
+    context.fillStyle = RandomRGBColor();
     sideNum = sidesRandom();
     if (counterThing < 135) {
       timesPerSec++;
@@ -26,7 +26,7 @@ canvas.addEventListener('click', function(event) {
 });
 
 
-canvas.addEventListener('mouseup', function(event){
+/*canvas.addEventListener('mouseup', function(event){
   var xVal = event.pageX,
     yVal = event.pageY;
   console.log(xVal, yVal);
@@ -45,9 +45,9 @@ canvas.addEventListener('mouseup', function(event){
     }
     counterThing = 0;
   }
-});
+});*/
 
-canvas.addEventListener('mousedown', function(event){
+/*canvas.addEventListener('mousedown', function(event){
   var xVal = event.pageX,
     yVal = event.pageY;
   console.log(xVal, yVal);
@@ -66,4 +66,4 @@ canvas.addEventListener('mousedown', function(event){
     }
     counterThing = 0;
   }
-});
+});*/
