@@ -32,7 +32,7 @@ var sideNum = 3;
 var timer = 0;
 var counter = 0;
 var counterThing = 0;
-var timesPerSec = 0;
+var timesPerSec = 1;
 
 function renderShape(context) {
   drawShape(sideNum);
@@ -53,18 +53,24 @@ function runGame() {
       timer++;
       counter = 0;
     }
-    if (counterThing == 134) {
+    if (counterThing == 34) {
       timesPerSec = 0;
       if (timesPerSec < 5) {
         multiplier = 1;
       }
     }
     context.fillText("Time: " + Math.trunc(timer), 35, 450);
+    context.fillText("Score: " + score, 10, 30);
+    context.fillText("Combo: " + multiplier, 10, 70);
+    if (timesPerSec>=8)
+    {
+      context.clearRect(10, 40, 400, 100);
+      context.font = "50px Arial";
+      context.fillText("Combo: " + multiplier, 10, 100);
+    }
     renderShape(context);
     RenderChildren(context);
     handleChildAnimation();
-    context.fillText("Score: " + score, 35, 50);
-
   }
   if (timer > 60) {
     context.font = "30px Arial";

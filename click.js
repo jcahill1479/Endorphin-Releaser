@@ -1,7 +1,7 @@
 var canvas = document.getElementById('mainCanvas');
 context = canvas.getContext('2d');
 
-var scorePlus = 5;
+var scorePlus = 1;
 var multiplier = 1;
 
 canvas.addEventListener('click', function(event) {
@@ -18,8 +18,8 @@ canvas.addEventListener('click', function(event) {
     if (counterThing < 135) {
       timesPerSec++;
     }
-    if (timesPerSec >=5){
-      multiplier = multiplier*1.1;
+    if (timesPerSec >=8){
+      multiplier = multiplier*2 + 1;
     }
     counterThing = 0;
   }
