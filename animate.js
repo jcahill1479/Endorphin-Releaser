@@ -8,7 +8,7 @@ function handleChildAnimation() {
       sin = Math.sin(radians);
     child.gravitySpeed += SHAPECHILDREN.gravity;
     child.x += SHAPECHILDREN.baseSpeed * sin;
-    child.y += SHAPECHILDREN.baseSpeed * cos + child.gravitySpeed;
+    child.y += SHAPECHILDREN.baseSpeed * cos +child.gravitySpeed;
     if (child.x>GAME.canvas.width)
     {
         delete child.x;

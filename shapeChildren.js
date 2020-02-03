@@ -52,12 +52,13 @@ function drawShapeChild(child, sides, context) {
 
   context.beginPath();
   context.moveTo(xcenter + size * Math.cos(0), ycenter + size * Math.sin(0));
-  //context.fillStyle = RandomRGBColor();  Disco Mode!!!!
+  //context.fillStyle = RandomRGBColor();  //Disco Mode!!!!
 
   for (var i = 1; i <= sides; i += 1) {
     context.lineTo (xcenter + size * Math.cos(i * 2 * Math.PI / sides), ycenter + size * Math.sin(i * 2 * Math.PI / sides));
   }
   context.stroke();
+  context.fillStyle = color;
   context.fill();
 }
 

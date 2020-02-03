@@ -12,6 +12,7 @@ function drawShape(sides) {
     context.lineTo (xcenter + size * Math.cos(i * 2 * Math.PI / sides), ycenter + size * Math.sin(i * 2 * Math.PI / sides));
   }
   context.stroke();
+  context.fillStyle = color;
   context.fill();
 }
 
@@ -19,6 +20,7 @@ function sidesRandom() {
 
   return Math.trunc(Math.random()*5)+3;
 }
+
 
 function RandomRGBColor() {
   var r = Math.random() * 255;
