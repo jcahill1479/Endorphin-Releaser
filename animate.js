@@ -87,7 +87,7 @@ function runGame() {
   }
   if (timer > 60) {
     context.font = "30px Arial";
-    context.fillText("Game Over", 135, 200);
+    context.fillText("Game Over", 135, 150);
     GAME.started = false;
   }
   window.requestAnimationFrame(runGame);
