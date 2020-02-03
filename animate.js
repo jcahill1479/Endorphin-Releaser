@@ -33,11 +33,13 @@ var timer = 0;
 var counter = 0;
 var counterThing = 0;
 var timesPerSec = 1;
+var thirdCounter = 0;
+var fontCounter = 0;
+var font = 0;
 
 function renderShape(context) {
   drawShape(sideNum);
 }
-
 
 function runGame() {
   var canvas = document.getElementById('mainCanvas');
@@ -46,8 +48,17 @@ function runGame() {
   if (GAME.started) {
     counter++;
     counterThing++;
+    thirdCounter++;
+    fontCounter++;
     context.font = "25px Arial";
     context.clearRect(0, 0, 500, 500);
+    if (thirdCounter == 3)
+    {
+      size = size-1;
+      font = font -1;
+      thirdCounter = 0;
+    }
+
     if (counter == 135) {
       timer++;
       counter = 0;
@@ -63,11 +74,14 @@ function runGame() {
     context.fillText("Combo: " + multiplier, 10, 70);
     if (timesPerSec>=8)
     {
-      context.clearRect(10, 40, 400, 100);
-      context.font = "50px Arial";
+      context.clearRect(10, 40, 400, 300);
+      context.font = font + "px Arial";
       context.fillText("Combo: " + multiplier, 10, 100);
     }
-    renderShape(context);
+    if (size>25)
+    {
+      renderShape(context);
+    }
     RenderChildren(context);
     handleChildAnimation();
   }

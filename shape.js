@@ -1,8 +1,7 @@
-
+var size = 75;
 function drawShape(sides) {
   var context = canvas.getContext('2d');
   var sides = sideNum;
-  var size = 50;
   var xcenter = 250;
   var ycenter = 250;
 

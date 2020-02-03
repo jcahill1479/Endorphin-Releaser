@@ -3,6 +3,7 @@ context = canvas.getContext('2d');
 
 var scorePlus = 1;
 var multiplier = 1;
+//var first = 0;
 
 canvas.addEventListener('click', function(event) {
   var xVal = event.pageX,
@@ -10,6 +11,8 @@ canvas.addEventListener('click', function(event) {
   console.log(xVal, yVal);
 
   if (yVal > 200 && yVal < 300 && xVal > 200 && xVal < 300) {
+    size = 100;
+    font = 50;
     generateShapeChildren();
     context.fillStyle = RandomRGBColor();
     sideNum = sidesRandom();
