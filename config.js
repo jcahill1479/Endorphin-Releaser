@@ -10,4 +10,5 @@ var SHAPE = {
   initialized : false,
     Xc : 0,
     Yc : 0
+    //shapes : []
 };

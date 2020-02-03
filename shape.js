@@ -28,3 +28,13 @@ function RandomRGBColor() {
   var b = Math.random() * 255;
   return 'rgb(' + Math.round(r) + ',' + Math.round(g) + ',' + Math.round(b) + ')';
 }
+
+/*function addShapes()
+{
+  SHAPE.shapes.push(
+    {
+      x : SHAPE.Xc,
+      y : SHAPE.Yc
+    }
+  );
+}*/
