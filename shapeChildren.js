@@ -31,7 +31,8 @@ function AddChild(size) {
       angle : direction,
       size : size,
       snap : false,
-      gravitySpeed : 0
+      gravitySpeed : 0,
+      colorChild : color
     }
   );
 }
@@ -58,7 +59,7 @@ function drawShapeChild(child, sides, context) {
     context.lineTo (xcenter + size * Math.cos(i * 2 * Math.PI / sides), ycenter + size * Math.sin(i * 2 * Math.PI / sides));
   }
   context.stroke();
-  context.fillStyle = color;
+  context.fillStyle = child.colorChild;
   context.fill();
 }
 
