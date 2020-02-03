@@ -8,10 +8,8 @@ canvas.addEventListener('click', function(event) {
   var xVal = event.pageX,
     yVal = event.pageY;
   console.log(xVal, yVal);
-  var color = RandomRGBColor();
 
   if (yVal > 200 && yVal < 300 && xVal > 200 && xVal < 300) {
-    score += scorePlus*multiplier;
     generateShapeChildren();
     context.fillStyle = RandomRGBColor();
     sideNum = sidesRandom();
@@ -21,6 +19,7 @@ canvas.addEventListener('click', function(event) {
     if (timesPerSec >=8){
       multiplier = multiplier*2 + 1;
     }
+    score += scorePlus*multiplier;
     counterThing = 0;
   }
 });
